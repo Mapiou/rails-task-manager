@@ -1,6 +1,6 @@
 <h1>Here are your tasks list:</h1>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.completed ? "✅" : "__" %><%= task.title %></li>
+    <li><%= task.completed ? "✅" : "__" %><%= link_to task.title, task_path(task) %></li>
   <% end %>
 </ul>
